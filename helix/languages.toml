@@ -1,0 +1,35 @@
+[[language]]
+name = "rust"
+scope = "source.rust"
+injection-regex = "rust"
+file-types = ["rs"]
+roots = ["Cargo.toml", "Cargo.lock"]
+auto-format = false
+formatter = { command = "rustfmt" }
+comment-tokens = "//"
+language-servers = ["rust-analyzer"]
+indent = { tab-width = 4, unit = "    " }
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[[language]]
+name = "go"
+file-types = ["go"]
+auto-format = true
+language-servers = ["gopls"]
+formatter = { command = "goimports" }
+indent = { tab-width = 4, unit = "    " }
+
+[language-server.gopls]
+command = "gopls"
+
+[[language]]
+name = "python"
+file-types = ["py"]
+auto-format = true
+language-servers = ["pylsp"]
+indent = { tab-width = 4, unit = "    " }
+
+[language-server.pylsp]
+command = "pylsp"

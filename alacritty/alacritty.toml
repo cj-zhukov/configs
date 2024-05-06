@@ -1,0 +1,16 @@
+live_config_reload = true
+
+[font]
+size = 19.0
+
+# [shell]
+# args = ["--login"]
+# program = "/usr/local/bin/fish"
+[shell]
+program = "/usr/local/bin/fish"
+args = ["-l", "-c", "tmux attach || tmux"]
+
+[window.padding]
+x = 18
+y = 18
+
