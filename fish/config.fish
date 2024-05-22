@@ -26,8 +26,8 @@ eval "$(starship init fish)"
 # Aliases
 alias ll "exa --grid --long --classify --header --no-user --tree --level 1 --group-directories-first"
 alias lll "exa --grid --long --classify --all --header --no-user --tree --level 1 --group-directories-first"
-# alisa ll "lsd"
 alias lsd "du -hs"
+alias myvenv 'source .env/bin/activate.fish'
 
 # `ls` → `ls -laG` abbreviation
 # abbr -a -g ls ls -laG
