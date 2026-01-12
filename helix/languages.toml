@@ -28,8 +28,15 @@ command = "gopls"
 name = "python"
 file-types = ["py"]
 auto-format = true
-language-servers = ["pylsp"]
+formatter = { command = "ruff", args = ["format", "-"] }
+language-servers = ["pyright"]
 indent = { tab-width = 4, unit = "    " }
 
-[language-server.pylsp]
-command = "pylsp"
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
