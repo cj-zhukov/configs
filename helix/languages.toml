@@ -13,6 +13,13 @@ indent = { tab-width = 4, unit = "    " }
 [language-server.rust-analyzer]
 command = "rust-analyzer"
 
+[language-server.rust-analyzer.config]
+checkOnSave = false
+cargo.jobs = 1
+
+[language-server.rust-analyzer.config.files]
+excludeDirs = ["target"]
+
 [[language]]
 name = "go"
 file-types = ["go"]
