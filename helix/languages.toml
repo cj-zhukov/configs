@@ -43,3 +43,15 @@ args = ["server"]
 command = "pyright-langserver"
 args = ["--stdio"]
 
+[[language]]
+name = "zig"
+file-types = ["zig"]
+roots = ["build.zig"]
+auto-format = true
+formatter = { command = "zig", args = ["fmt", "--stdin"] }
+language-servers = ["zls"]
+indent = { tab-width = 4, unit = "    " }
+comment-tokens = "//"
+
+[language-server.zls]
+command = "zls"
