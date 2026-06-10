@@ -5,7 +5,7 @@ injection-regex = "rust"
 file-types = ["rs"]
 roots = ["Cargo.toml", "Cargo.lock"]
 auto-format = true
-formatter = { command = "rustfmt" }
+formatter = { command = "rustfmt", args = ["--edition", "2024"] }
 comment-tokens = "//"
 language-servers = ["rust-analyzer"]
 indent = { tab-width = 4, unit = "    " }
