@@ -45,6 +45,17 @@ C-a = "select_all"
 esc = ["collapse_selection", "keep_primary_selection"]
 "tab" = "goto_next_buffer"
 "S-tab" = "goto_previous_buffer"
+# yazi 
+C-y = [
+  ':sh rm -f /tmp/yazi-helix-path',
+  # ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/yazi-helix-path', # open from current file dir
+  ':insert-output yazi --chooser-file=/tmp/yazi-helix-path', # open from project root
+  ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/yazi-helix-path}',
+  ':redraw',
+  ':set mouse false',
+  ':set mouse true',
+]
 
 [keys.normal."backspace"]
 s = [":w", ":config-reload"]
