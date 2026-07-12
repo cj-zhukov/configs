@@ -43,8 +43,9 @@ hidden = false
 C-s = ":w" 
 C-a = "select_all"
 esc = ["collapse_selection", "keep_primary_selection"]
-"tab" = "goto_next_buffer"
-"S-tab" = "goto_previous_buffer"
+tab = "goto_next_buffer"
+S-tab = "goto_previous_buffer"
+C-w = ":buffer-close"
 # yazi 
 C-y = [
   ':sh rm -f /tmp/yazi-helix-path',
