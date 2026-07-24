@@ -22,7 +22,6 @@ starship init fish | source
 
 # Aliases
 alias hx helix
-# alias ll "exa --grid --long --classify --all --header --no-user --tree --level 1 --group-directories-first"
-alias ll "exa --grid --long --classify --header --no-user --tree --level 1 --group-directories-first"
-alias lll "exa --grid --long --classify --all --header --no-user --tree --level 1 --group-directories-first"
+alias ll "eza -l --classify --header --no-user --tree --level=1 --group-directories-first"
+alias lll "eza -la --classify --header --no-user --tree --level=1 --group-directories-first"
 alias lsd "du -hs"
